@@ -236,7 +236,7 @@
 
         .problems {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 1rem;
             list-style: none;
             padding: 0;
@@ -288,7 +288,7 @@
         /* ---------- Services ---------- */
         .services {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 1rem;
             list-style: none;
             padding: 0;
@@ -418,7 +418,7 @@
             border-radius: 999px;
         }
 
-        .flow span:nth-child(5) {
+        .flow .hl {
             background: var(--accent-soft);
             border-color: transparent;
             color: var(--accent);
@@ -465,6 +465,306 @@
             font-size: 0.82rem;
             color: var(--accent);
             text-align: right;
+        }
+
+
+        /* ---------- Hero chips, text links ---------- */
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin-top: 1.25rem;
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+        }
+
+        .chips li {
+            padding: 0.3rem 0.7rem;
+            border: 1px solid rgba(248, 250, 250, 0.35);
+            border-radius: 999px;
+            color: var(--brand-ink);
+        }
+
+        .textlink {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--accent);
+            text-underline-offset: 3px;
+        }
+
+        .flow .ladder-note {
+            border: 0;
+            padding: 0;
+            color: var(--muted);
+            font-size: 0.72rem;
+        }
+
+        /* ---------- Assessment ---------- */
+        .assess {
+            display: grid;
+            grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .stages {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .stage {
+            display: grid;
+            grid-template-columns: 2.6rem 1fr;
+            gap: 0.75rem;
+            align-items: baseline;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .stage .lv {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .stage strong {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            letter-spacing: -0.01em;
+        }
+
+        .stage span.d {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .stage.on {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+        }
+
+        .stage.on .lv {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .quiz {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 1.75rem 1.5rem 1.5rem;
+            display: grid;
+            gap: 1.25rem;
+            min-width: 0;
+        }
+
+        .progress {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .progress .steps {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 3px;
+        }
+
+        .progress .steps i {
+            height: 4px;
+            border-radius: 2px;
+            background: var(--line);
+        }
+
+        .progress .steps i.on {
+            background: var(--accent);
+        }
+
+        .quiz h3 {
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+            text-wrap: balance;
+        }
+
+        .options {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .opt {
+            font: inherit;
+            font-size: 0.98rem;
+            text-align: left;
+            color: var(--ink);
+            background: var(--bg);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            cursor: pointer;
+            transition: border-color 0.15s ease, background 0.15s ease;
+        }
+
+        .opt:hover {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        .quiz-foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .linkbtn {
+            font: inherit;
+            font-weight: 600;
+            color: var(--accent);
+            background: none;
+            border: 0;
+            padding: 0.25rem 0;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .result {
+            display: grid;
+            gap: 1.1rem;
+        }
+
+        .result .big {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .result .lvl {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .result .bar {
+            grid-template-columns: 8.2rem 1fr;
+        }
+
+        .result .pips {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gaps {
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .gaps b {
+            color: var(--problem);
+            font-weight: 600;
+        }
+
+        .next {
+            background: var(--accent-soft);
+            border-radius: 8px;
+            padding: 1.1rem 1.15rem;
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .next h4 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            letter-spacing: -0.01em;
+        }
+
+        .next p {
+            font-size: 0.97rem;
+        }
+
+        .next-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            align-items: center;
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: var(--bg);
+            border: 0;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-accent:hover {
+            filter: brightness(1.08);
+        }
+
+        .mail-inline {
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+            user-select: all;
+        }
+
+        /* ---------- Stance ---------- */
+        .stance {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 2rem 1.5rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .stance li {
+            border-top: 2px solid var(--accent);
+            padding-top: 1rem;
+            display: grid;
+            gap: 0.4rem;
+            align-content: start;
+        }
+
+        .stance h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .stance p {
+            font-size: 0.97rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 1100px) {
+            .stance {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .stance {
+                grid-template-columns: 1fr;
+            }
+
+            .result .bar {
+                grid-template-columns: 6.6rem 1fr;
+            }
         }
 
         /* ---------- Contact ---------- */
@@ -518,15 +818,29 @@
             opacity: 0.75;
         }
 
-        @media (max-width: 960px) {
+        @media (max-width: 1100px) {
+            .problems {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
 
-            .problems,
+        @media (max-width: 960px) {
             .services {
+                grid-template-columns: 1fr;
+            }
+
+            .assess {
                 grid-template-columns: 1fr;
             }
 
             section {
                 padding-block-start: 3.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .problems {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -562,9 +876,14 @@
             <div class="hero-text">
                 <h1>datalpia</h1>
                 <p>Bridging data science and engineering</p>
+                <ul class="chips">
+                    <li>Open source only</li>
+                    <li>Self-hosted</li>
+                    <li>Frugal by design</li>
+                </ul>
                 <div class="hero-actions">
                     <a class="btn btn-solid" href="#services">See services</a>
-                    <a class="btn btn-line" href="#contact">Get in touch</a>
+                    <a class="btn btn-line" href="#assessment">Assess your maturity</a>
                 </div>
             </div>
         </div>
@@ -575,7 +894,7 @@
             <div class="wrap">
                 <div class="section-head">
                     <p class="eyebrow">Sound familiar?</p>
-                    <h2 id="problems-title">Models are built. Getting them to production is the hard part.</h2>
+                    <h2 id="problems-title">A prototype is easy. Running it in production, on your terms, is not.</h2>
                 </div>
                 <ol class="problems">
                     <li class="problem">
@@ -596,6 +915,12 @@
                         <p class="symptom">&ldquo;Data science throws it over the wall. Engineering rewrites it.&rdquo;</p>
                         <p>Data scientists, software engineers and DevOps use different tools and vocabulary, and hand work off late.</p>
                     </li>
+                    <li class="problem">
+                        <span class="tag">D</span>
+                        <h3>AI used without a plan</h3>
+                        <p class="symptom">&ldquo;We plugged an LLM into everything. Cost, data exposure and reliability are anyone&rsquo;s guess.&rdquo;</p>
+                        <p>Generic agents get used where plain rules or a small specialised model would be cheaper, faster and fully under your control.</p>
+                    </li>
                 </ol>
             </div>
         </section>
@@ -604,13 +929,13 @@
             <div class="wrap">
                 <div class="section-head">
                     <p class="eyebrow">Services</p>
-                    <h2 id="services-title">Three ways to get your models into production on purpose.</h2>
+                    <h2 id="services-title">Four ways to run your models and AI on purpose.</h2>
                 </div>
                 <ul class="services">
                     <li class="service">
                         <div class="answers">Answers <span class="tag">A</span><span class="tag">B</span><span class="tag">C</span></div>
                         <h3>MLOps strategy audit</h3>
-                        <p class="lead">A technical diagnosis of how your models are built, shipped and run today.</p>
+                        <p class="lead">A technical diagnosis of how your models are built, shipped and run today, scored on a maturity grid from no MLOps to a full lifecycle.</p>
                         <ul>
                             <li>Detailed written report</li>
                             <li>MLOps maturity evaluation</li>
@@ -623,6 +948,7 @@
                             <div class="bar"><span>Governance</span><span class="pips"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div>
                             <div class="bar"><span>Collaboration</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div>
                         </div>
+                        <a class="textlink" href="#assessment">Try the 2-minute self-assessment &rarr;</a>
                         <div class="price">
                             <div><strong>€5,000</strong> <small>excl. VAT</small></div>
                             <div class="duration">1 week</div>
@@ -648,7 +974,7 @@
                     <li class="service">
                         <div class="answers">Answers <span class="tag">A</span><span class="tag">B</span></div>
                         <h3>Production MLflow, self-hosted</h3>
-                        <p class="lead">We help you set up an MLflow instance your teams can rely on, with the rules around it.</p>
+                        <p class="lead">We help you set up an open-source MLflow instance your teams can rely on, on your servers or in your cloud, with the rules around it.</p>
                         <ul>
                             <li>Model promotion strategy</li>
                             <li>Permissions governance</li>
@@ -656,12 +982,85 @@
                         </ul>
                         <div class="viz" aria-label="Model promotion path">
                             <div class="viz-label">Promotion path</div>
-                            <div class="flow"><span>Train</span><b>&rarr;</b><span>Register</span><b>&rarr;</b><span>Staging</span><b>&rarr;</b><span>Production</span></div>
+                            <div class="flow"><span>Train</span><b>&rarr;</b><span>Register</span><b>&rarr;</b><span>Staging</span><b>&rarr;</b><span class="hl">Production</span></div>
                         </div>
                         <div class="price">
                             <div><strong>On quote</strong></div>
                             <div class="duration">Let&rsquo;s discuss</div>
                         </div>
+                    </li>
+
+                    <li class="service">
+                        <div class="answers">Answers <span class="tag">D</span></div>
+                        <h3>LLMOps &amp; agentic AI audit</h3>
+                        <p class="lead">An audit of how you use LLMs and agents today and what you actually need, followed by a roadmap of possible actions.</p>
+                        <ul>
+                            <li>Review of current practices and requirements</li>
+                            <li>Roadmap of prioritised actions</li>
+                            <li>Open-source, self-hostable options first</li>
+                        </ul>
+                        <div class="viz" aria-label="Frugal ladder from rules to agents">
+                            <div class="viz-label">Use the lightest tool that works</div>
+                            <div class="flow"><span class="hl">Rules</span><b>&rarr;</b><span>Classic ML</span><b>&rarr;</b><span>Small open LLM</span><b>&rarr;</b><span>Agent</span></div>
+                        </div>
+                        <div class="price">
+                            <div><strong>On quote</strong></div>
+                            <div class="duration">Same format as the MLOps audit</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="assessment" aria-labelledby="assess-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Self-assessment</p>
+                    <h2 id="assess-title">Where does your MLOps stand? Eight questions, two minutes.</h2>
+                </div>
+                <div class="assess">
+                    <ol class="stages" id="stages" aria-label="MLOps maturity stages"></ol>
+                    <div class="quiz" id="quiz">
+                        <div id="quiz-q">
+                            <div class="progress">
+                                <div class="steps" id="steps"></div>
+                                <span class="eyebrow" id="q-count"></span>
+                            </div>
+                            <h3 id="q-text" tabindex="-1"></h3>
+                            <div class="options" id="q-options"></div>
+                            <div class="quiz-foot">
+                                <button type="button" class="linkbtn" id="q-back" hidden>&larr; Back</button>
+                                <span>Indicative only. Your answers stay in your browser.</span>
+                            </div>
+                        </div>
+                        <div class="result" id="quiz-r" hidden></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stance" aria-labelledby="stance-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Our stance</p>
+                    <h2 id="stance-title">Your data, your models, your infrastructure.</h2>
+                </div>
+                <ul class="stance">
+                    <li>
+                        <h3>Open source only</h3>
+                        <p>Inspectable tools with no licence surprises and no vendor deciding your roadmap.</p>
+                    </li>
+                    <li>
+                        <h3>Self-hosted</h3>
+                        <p>On-premises or in your own cloud account. Data and models stay where you decide.</p>
+                    </li>
+                    <li>
+                        <h3>Frugal</h3>
+                        <p>A specialised lightweight model before a generic agent, whenever it does the job.</p>
+                    </li>
+                    <li>
+                        <h3>Independent</h3>
+                        <p>You can run and evolve the result without us. We hand over, not lock in.</p>
                     </li>
                 </ul>
             </div>
@@ -671,8 +1070,8 @@
     <footer class="contact" id="contact">
         <div class="wrap">
             <div>
-                <h2>Not sure where you stand?</h2>
-                <p>Tell us about your models and your teams. We&rsquo;ll suggest the right starting point.</p>
+                <h2>Tell us about your models, your agents and your constraints.</h2>
+                <p>We&rsquo;ll suggest the right starting point.</p>
             </div>
             <div class="contact-side">
                 <a class="btn btn-solid mail" href="mailto:hello@datalpia.com">hello@datalpia.com</a>
@@ -694,6 +1093,142 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function () {
+            var EMAIL = 'hello@datalpia.com';
+            var STAGES = [
+                { n: 'Ad hoc', d: 'Models live in notebooks. Production is a one-off effort that depends on individuals.' },
+                { n: 'Manual', d: 'Some scripts and habits exist, but training, release and monitoring still rely on manual steps.' },
+                { n: 'Automated training', d: 'Training runs in a pipeline. Models still reach production through manual promotion.' },
+                { n: 'Automated release', d: 'Models ship through CI/CD. Monitoring and governance are the remaining gaps.' },
+                { n: 'Full lifecycle', d: 'Training, release, monitoring and retraining form a governed, automated loop.' }
+            ];
+            var Q = [
+                { dim: 'Delivery path', q: 'How does a model reach production today?', a: ['It mostly does not, or it is a one-off effort', 'Someone copies a notebook or script by hand', 'A scripted pipeline owned by the team', 'One automated path that every model follows'] },
+                { dim: 'Reproducibility', q: 'Can you reproduce a model trained last quarter?', a: ['No', 'With effort, from the code only', 'Yes: code, parameters and metrics are tracked', 'Yes: code, data, parameters and environment are versioned'] },
+                { dim: 'Registry', q: 'Do you know which model version is live and who approved it?', a: ['No', 'Someone remembers', 'A registry lists versions', 'A registry with stages, approvals and an audit trail'] },
+                { dim: 'Retraining', q: 'How is a model retrained?', a: ['Manually, in a notebook', 'Manually, with scripts', 'An automated pipeline, on a schedule or trigger', 'Automated, with validation gates and monitoring signals'] },
+                { dim: 'Release', q: 'How is a new model version released?', a: ['Files are copied by hand', 'Manually, following a checklist', 'CI/CD ships the serving code', 'CI/CD with automated tests, progressive rollout and rollback'] },
+                { dim: 'Monitoring', q: 'How do you notice a model degrading?', a: ['Users complain', 'Someone checks now and then', 'Dashboards on service health and data', 'Automated alerts on drift and performance'] },
+                { dim: 'Collaboration', q: 'How do data science and engineering work together?', a: ['Separately, with a handoff at the end', 'Engineers rewrite what data scientists build', 'Shared repositories and tools, in part', 'Shared standards, tools and ownership'] },
+                { dim: 'Governance', q: 'Who controls access to your ML platform and models?', a: ['Nobody in particular', 'A few informal rules', 'Role-based permissions and SSO on the main tools', 'Full governance on a stack you host and control'] }
+            ];
+            var NEXT = [
+                { t: 'MLOps philosophy training', p: 'Start with one shared picture of the model lifecycle, so data science, engineering and DevOps pull in the same direction before tools are chosen.' },
+                { t: 'MLOps strategy audit', p: 'You have working pieces. An audit shows which ones to automate first and gives you a prioritised roadmap.' },
+                { t: 'Production MLflow with a promotion strategy', p: 'Training is automated. A self-hosted registry with clear promotion rules closes the gap between a good model and a released one.' },
+                { t: 'Production MLflow with governance and SSO', p: 'Release is automated. Permissions, approvals and single sign-on make it safe to scale across teams.' },
+                { t: 'LLMOps & agentic AI audit', p: 'Your ML foundations are solid. Extend them to LLMs and agents without losing cost, data and quality control.' }
+            ];
+            var COLLAB_NOTE = 'Collaboration is one of your weakest areas, and it is what the MLOps philosophy training targets.';
+
+            var $ = function (id) { return document.getElementById(id); };
+            var answers = [], step = 0, interacted = false;
+
+            // Stage legend
+            var legend = $('stages');
+            STAGES.forEach(function (s, i) {
+                var li = document.createElement('li');
+                li.className = 'stage';
+                li.id = 'stage-' + i;
+                li.innerHTML = '<span class="lv">L' + i + '</span><div><strong>' + s.n + '</strong><span class="d">' + s.d + '</span></div>';
+                legend.appendChild(li);
+            });
+
+            // Progress segments
+            var steps = $('steps');
+            Q.forEach(function () { steps.appendChild(document.createElement('i')); });
+
+            function pips(v) {
+                var h = '<span class="pips">';
+                for (var i = 0; i < 3; i++) h += '<i' + (i < v ? ' class="on"' : '') + '></i>';
+                return h + '</span>';
+            }
+
+            function stageOf(t) { return t < 4 ? 0 : t < 9 ? 1 : t < 14 ? 2 : t < 19 ? 3 : 4; }
+
+            function showQuestion() {
+                $('quiz-q').hidden = false;
+                $('quiz-r').hidden = true;
+                var q = Q[step];
+                $('q-count').textContent = 'Question ' + (step + 1) + ' of ' + Q.length + ' · ' + q.dim;
+                $('q-text').textContent = q.q;
+                Array.prototype.forEach.call(steps.children, function (el, i) { el.className = i <= step ? 'on' : ''; });
+                var box = $('q-options');
+                box.innerHTML = '';
+                q.a.forEach(function (label, v) {
+                    var b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'opt';
+                    b.textContent = label;
+                    b.addEventListener('click', function () { answers[step] = v; interacted = true; next(); });
+                    box.appendChild(b);
+                });
+                $('q-back').hidden = step === 0;
+                if (interacted) $('q-text').focus({ preventScroll: true });
+            }
+
+            function next() {
+                step++;
+                if (step < Q.length) showQuestion(); else showResult();
+            }
+
+            function summary(total, st, gaps) {
+                return 'Datalpia MLOps self-assessment\nStage L' + st + ' - ' + STAGES[st].n + ' (score ' + total + '/' + (Q.length * 3) + ')\nWeakest areas: ' + gaps.join(', ') + '\nSuggested next step: ' + NEXT[st].t;
+            }
+
+            function showResult() {
+                var total = answers.reduce(function (a, b) { return a + b; }, 0);
+                var st = stageOf(total);
+                var order = Q.map(function (q, i) { return { dim: q.dim, v: answers[i] }; });
+                var gaps = order.slice().sort(function (a, b) { return a.v - b.v; }).slice(0, 2).map(function (o) { return o.dim; });
+                var collabLow = answers[6] <= 1 && st > 0;
+                var text = summary(total, st, gaps);
+
+                Array.prototype.forEach.call(legend.children, function (li, i) { li.classList.toggle('on', i === st); });
+
+                var h = '<div><div class="lvl">Your stage: L' + st + ' of 4</div><div class="big">' + STAGES[st].n + '</div></div>';
+                h += '<p>' + STAGES[st].d + '</p>';
+                h += '<div class="viz" style="border:0;padding:0">';
+                order.forEach(function (o) { h += '<div class="bar"><span>' + o.dim + '</span>' + pips(o.v) + '</div>'; });
+                h += '</div>';
+                h += '<p class="gaps">Biggest gaps: <b>' + gaps.join('</b> and <b>') + '</b>.</p>';
+                h += '<div class="next"><span class="eyebrow">Suggested next step</span><h4>' + NEXT[st].t + '</h4><p>' + NEXT[st].p + (collabLow ? ' ' + COLLAB_NOTE : '') + '</p>';
+                h += '<div class="next-actions"><a class="btn btn-accent" id="r-mail" href="mailto:' + EMAIL + '">Email us this result</a>';
+                h += '<button type="button" class="linkbtn" id="r-copy">Copy my result</button>';
+                h += '<span class="mail-inline">' + EMAIL + '</span></div></div>';
+                h += '<div class="quiz-foot"><button type="button" class="linkbtn" id="r-restart">Start over</button><span>Indicative only. Nothing was sent anywhere.</span></div>';
+
+                var r = $('quiz-r');
+                r.innerHTML = h;
+                $('quiz-q').hidden = true;
+                r.hidden = false;
+                $('r-mail').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('MLOps self-assessment') + '&body=' + encodeURIComponent(text);
+                $('r-restart').addEventListener('click', restart);
+                $('r-copy').addEventListener('click', function () {
+                    var btn = this;
+                    var done = function () { btn.textContent = 'Copied'; };
+                    var fallback = function () {
+                        var ta = document.createElement('textarea');
+                        ta.value = text; document.body.appendChild(ta); ta.select();
+                        try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'Select and copy from the email link'; }
+                        document.body.removeChild(ta);
+                    };
+                    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback();
+                });
+                Array.prototype.forEach.call(steps.children, function (el) { el.className = 'on'; });
+            }
+
+            function restart() {
+                answers = []; step = 0;
+                Array.prototype.forEach.call(legend.children, function (li) { li.classList.remove('on'); });
+                showQuestion();
+            }
+
+            $('q-back').addEventListener('click', function () { if (step > 0) { step--; showQuestion(); } });
+            showQuestion();
+        })();
+    </script>
 </body>
 
 </html>
